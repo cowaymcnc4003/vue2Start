@@ -1,0 +1,27 @@
+<template>
+  <div id="app">
+    <text-view></text-view>
+  </div>
+</template>
+
+<script>
+import TextView from './view/TextView.vue'
+
+export default {
+  name: 'App',
+  components: {
+    TextView
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-align: center; */
+  color: #2c3e50;
+  margin-top: 10px;
+}
+</style>
