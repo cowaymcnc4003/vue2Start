@@ -22,7 +22,7 @@
         <button @click="chageIf">click me</button>
         <div>6. vue v-for 예제</div>
         <ul>
-            <li v-for="user in userList" :key="user">
+            <li v-for="user in userList" :key="user.id">
                 <div>postId : {{ user.postId }}</div>
                 <div>id : {{ user.id }}</div>
                 <div>name : {{ user.name }}</div>
@@ -30,6 +30,15 @@
                 <div>body : {{ user.body }}</div>
             </li>
         </ul>
+        <div>7. computed</div>
+        <!-- <div>number1 : {{ number1 }}</div>
+        <div>number2 : {{ number2 }}</div> -->
+        <div>number1 method : {{ chageSum1() }}</div>
+        <div>number2 computed : {{ chageSum2 }}</div>
+        <button @click="number1 = 5;">number1 add click me</button>
+        <button @click="number2 = 5;">number1 add click me</button>
+        <!-- <button @click="number2++">number2 add click me</button> -->
+        <!-- <button @click="chageSum">click me</button> -->
         <div>-------------------------------------------------</div>
     </div>
 </template>
@@ -62,6 +71,9 @@ export default {
             vBindClickFlg: false,
             showHide: false,
             userList: [],
+            number1: 0,
+            number2: 0,
+            sumNumber: 1,
         }
     },
     methods: {
@@ -74,7 +86,17 @@ export default {
         chageClass() {
             this.vBindClickFlg = !this.vBindClickFlg;
         },
+        chageSum1() {
+            console.log(`methods this.number2 ${this.number1}`);
+            return this.number1;
+        },
     },
+    computed: {
+        chageSum2() {
+            console.log(`computed this.number2 ${this.number2}`);
+            return this.number2;
+        },
+    }
 }
 </script>
 
