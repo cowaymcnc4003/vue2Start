@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-    <app-header :propdata=titleName></app-header>
+    <app-header propsData:propsData @emitEvent='emitMethods'></app-header>
     <text-view></text-view>
   </div>
 </template>
@@ -11,6 +10,16 @@ import AppHeader from './components/AppHeader.vue'
 import TextView from './view/TextView.vue'
 
 export default {
+  data() {
+    return {
+      propsData : "appHeader",
+    }
+  },
+  methods: {
+    emitMethods(text) {
+      console.log(text);
+    }
+  },
   name: 'App',
   data() {
     return {
