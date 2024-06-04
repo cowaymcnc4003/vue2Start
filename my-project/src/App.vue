@@ -1,12 +1,15 @@
 <template>
   <div id="app">
     <app-header :propsData="propsParam" @emitEvent='emitMethods'></app-header>
+    <tool-bar></tool-bar>
+    <router-view></router-view>
     <text-view></text-view>
   </div>
 </template>
 
 <script>
 import AppHeader from './components/AppHeader.vue'
+import ToolBar from './components/ToolBar.vue'
 import TextView from './view/TextView.vue'
 
 export default {
@@ -23,7 +26,8 @@ export default {
   name: 'App',
   components: {
     TextView,
-    AppHeader
+    AppHeader,
+    ToolBar
   }
 }
 </script>
