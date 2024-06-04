@@ -21,11 +21,6 @@ export default {
     }
   },
   name: 'App',
-  data() {
-    return {
-      titleName: "aaaaa",
-    }
-  },
   components: {
     TextView,
     AppHeader
