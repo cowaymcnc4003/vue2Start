@@ -5,8 +5,13 @@
 </template>
 
 <script>
-export default {
+import { fetchNewsList } from '../api/index.js'
 
+export default {
+    async created() {
+        let data = await fetchNewsList();
+        console.log(data);
+    },
 }
 </script>
 
