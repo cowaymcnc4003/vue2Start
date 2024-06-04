@@ -1,7 +1,7 @@
 import { mapGetters } from 'vuex';
 export default {
     async created() {
-        this.$store.dispatch("FETCH_LIST", this.$route.name);
+        // this.$store.dispatch("FETCH_LIST", this.$route.name);
         // let data = await fetchNewsList();
         // console.log(data);
     },
