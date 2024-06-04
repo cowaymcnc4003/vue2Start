@@ -7,5 +7,8 @@ export default {
     },
     SET_ASK(state, data) {
         state.ask = data;
+    },
+    SET_NEWSLIST(state, data) {
+        state.newsList = data;
     }
 }

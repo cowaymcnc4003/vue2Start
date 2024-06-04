@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul class="news-list">
-            <li v-for="item in userList" class="post" :key=item.id>
+            <li v-for="item in newsList" class="post" :key=item.id>
                 <!-- 포인트 영역-->
                 <div class="points">
                     {{ item.points || 0 }}
@@ -45,7 +45,7 @@ export default {
         // ...mapGetters(['fetchedUser'])
         // 5번
         ...mapGetters({
-            userList: 'fetchedUser'
+            newsList: 'fetchedList'
         })
         // 3번
         // ...mapState({
@@ -59,7 +59,7 @@ export default {
         // }
     },
     async created() {
-        this.$store.dispatch("FETCH_USER");
+        this.$store.dispatch("FETCH_LIST", this.$route.name);
         // let data = await fetchNewsList();
         // console.log(data);
     },
