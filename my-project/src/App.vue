@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-header propsData:propsData @emitEvent='emitMethods'></app-header>
+    <app-header :propsData="propsParam" @emitEvent='emitMethods'></app-header>
     <text-view></text-view>
   </div>
 </template>
@@ -12,7 +12,7 @@ import TextView from './view/TextView.vue'
 export default {
   data() {
     return {
-      propsData : "appHeader",
+      propsParam : "appHeader",
     }
   },
   methods: {
