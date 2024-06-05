@@ -8,19 +8,6 @@
             <span slot="karma">{{ fetchedUserList.karma }}</span>
         </user-profile>
         <control-view v-model="checked"></control-view>
-        <!-- <div class="user-container">
-            <div>
-                <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="user-description">
-                <div>{{ fetchedUserList.id }}</div>
-                <div class="time">
-                    <span>{{ 'Joined' + fetchedUserList.created }}, </span>
-                </div>
-                <span>{{ fetchedUserList.karma }}</span>
-            </div>
-        </div> -->
-        <!--사용자 정보-->
     </div>
 </template>
 
