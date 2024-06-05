@@ -1,4 +1,4 @@
-import { fetchNewsList, fetchJobsList, fetchAskList, fetchList } from './../api/index.js';
+import { fetchNewsList, fetchJobsList, fetchAskList, fetchList, fetchUser, fetchCommentItem } from './../api/index.js';
 
 export default {
     async FETCH_USER(context) {
@@ -16,5 +16,13 @@ export default {
     async FETCH_LIST(context, routerName) {
         const res = await fetchList(routerName);
         context.commit('SET_NEWSLIST', res.data);
+    },
+    async FETCH_USERLIST(context, id) {
+        const res = await fetchUser(id);
+        context.commit('SET_USERLIST', res.data);
+    },
+    async FETCH_ITEMLIST(context, id) {
+        const res = await fetchCommentItem(id);
+        context.commit('SET_ITEMLIST', res.data);
     }
 }

@@ -3,4 +3,6 @@ export default {
     jobs: [],
     ask: [],
     newsList: [],
+    userList: [],
+    itemList: [],
 }

@@ -10,5 +10,11 @@ export default {
     },
     SET_NEWSLIST(state, data) {
         state.newsList = data;
+    },
+    SET_USERLIST(state, data) {
+        state.userList = data;
+    },
+    SET_ITEMLIST(state, data) {
+        state.itemList = data;
     }
 }
