@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <h2>User Profile</h2>
+        <!--사용자 정보-->
         <div class="user-container">
             <div>
                 <i class="fa-solid fa-user"></i>
@@ -13,6 +14,7 @@
                 <span>{{ fetchedUserList.karma }}</span>
             </div>
         </div>
+        <!--사용자 정보-->
     </div>
 </template>
 

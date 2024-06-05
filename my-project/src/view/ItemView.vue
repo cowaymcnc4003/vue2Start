@@ -16,6 +16,7 @@
                     <span>{{ fetchedItemList.karma }}</span>
                 </div>
             </div>
+            <!--사용자 정보-->
             <section>
                 <h2>{{ fetchedItemList.title }}</h2>
             </section>
