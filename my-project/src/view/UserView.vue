@@ -2,7 +2,12 @@
     <div class="container">
         <h2>User Profile</h2>
         <!--사용자 정보-->
-        <div class="user-container">
+        <user-profile>
+            <div slot="username">{{ fetchedUserList.id }}</div>
+            <span slot="time">{{ 'Joined' + fetchedUserList.created }}</span>
+            <span slot="karma">{{ fetchedUserList.karma }}</span>
+        </user-profile>
+        <!-- <div class="user-container">
             <div>
                 <i class="fa-solid fa-user"></i>
             </div>
@@ -13,14 +18,16 @@
                 </div>
                 <span>{{ fetchedUserList.karma }}</span>
             </div>
-        </div>
+        </div> -->
         <!--사용자 정보-->
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import UserProfile from '../components/UserProfile.vue';
 export default {
+  components: { UserProfile },
     computed: {
         ...mapGetters(['fetchedUserList']),
     },

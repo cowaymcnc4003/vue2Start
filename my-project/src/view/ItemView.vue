@@ -2,7 +2,14 @@
     <div>
         <section>
             <!--사용자 정보-->
-            <div class="user-container">
+            <user-profile>
+                <router-link slot="username" :to="`/user/${fetchedItemList.user}`">
+                    {{ fetchedItemList.user }}
+                </router-link>
+                <template slot="time">{{ fetchedItemList.time_ago }}</template>
+                <span slot="karma">{{ fetchedItemList.karma }}</span>
+            </user-profile>
+            <!-- <div class="user-container">
                 <div>
                     <i class="fa-solid fa-user"></i>
                 </div>
@@ -15,7 +22,7 @@
                     </div>
                     <span>{{ fetchedItemList.karma }}</span>
                 </div>
-            </div>
+            </div> -->
             <!--사용자 정보-->
             <section>
                 <h2>{{ fetchedItemList.title }}</h2>
@@ -32,7 +39,9 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import UserProfile from '../components/UserProfile.vue';
 export default {
+  components: { UserProfile },
     computed: {
         ...mapGetters(['fetchedItemList'])
     },
