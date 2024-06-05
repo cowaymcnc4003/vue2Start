@@ -7,6 +7,7 @@
             <span slot="time">{{ 'Joined' + fetchedUserList.created }}</span>
             <span slot="karma">{{ fetchedUserList.karma }}</span>
         </user-profile>
+        <control-view v-model="checked"></control-view>
         <!-- <div class="user-container">
             <div>
                 <i class="fa-solid fa-user"></i>
@@ -26,10 +27,16 @@
 <script>
 import { mapGetters } from 'vuex'
 import UserProfile from '../components/UserProfile.vue';
+import ControlView from './ControlView.vue';
 export default {
-  components: { UserProfile },
+  components: { UserProfile, ControlView },
     computed: {
         ...mapGetters(['fetchedUserList']),
+    },
+    data() {
+        return {
+            checked : true,
+        }
     },
     created() {
         const itemId = this.$route.params.id;
